@@ -168,4 +168,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\Twitter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fondo3.jpg" />
+  </ItemGroup>
 </Project>
