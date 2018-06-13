@@ -1,8 +1,10 @@
 ﻿namespace Lands.ViewModels
 {
+    using GalaSoft.MvvmLight.Command;
+    using System;
     using System.Windows.Input;
 
-    class LoginViewModel
+    public class LoginViewModel
     {
         #region Properties
         public string Email
@@ -40,8 +42,15 @@
         #region Commands
         public ICommand LoginCommand
         {
-            get;
-            set;
+            get
+            {
+                return new RelayCommand(Login);
+            }
+        }
+
+        private void Login()
+        {
+
         }
         #endregion
     }
