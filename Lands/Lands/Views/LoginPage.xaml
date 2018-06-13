@@ -6,7 +6,8 @@
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="Lads">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BindingContext="{Binding Login}">
             <RelativeLayout>
                 <Image 
                     Aspect="Fill"
@@ -39,6 +40,7 @@
                                 Keyboard="Email"
                                 Placeholder="Enter your email..."
                                 PlaceholderColor="BlueViolet"
+                                Text="{Binding Email, Mode=TwoWay}"
                                 TextColor="White">
                             </Entry>
                             <Label
@@ -54,10 +56,12 @@
                                 IsPassword="True"
                                 Placeholder="Enter your password..."
                                 PlaceholderColor="BlueViolet"
+                                Text="{Binding Password, Mode=TwoWay}"
                                 TextColor="White">
                             </Entry>
                         </Grid>
                         <ActivityIndicator
+                            IsRunning="{Binding IsRunning, Mode=TwoWay}"
                             VerticalOptions="CenterAndExpand">
                         </ActivityIndicator>
                         <StackLayout
@@ -71,6 +75,7 @@
                                 TextColor="White">
                             </Label>
                             <Switch
+                                IsToggled="{Binding IsRemembered, Mode=TwoWay}"
                                 HorizontalOptions="End">
                             </Switch>
                         </StackLayout>
@@ -87,6 +92,7 @@
                             <Button
                                 BorderRadius="23"
                                 BackgroundColor="Purple"
+                                Command="{Binding LoginCommand}"
                                 HeightRequest="46"
                                 HorizontalOptions="FillAndExpand"
                                 Text="Login"
