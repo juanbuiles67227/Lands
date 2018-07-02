@@ -9,6 +9,11 @@
         <StackLayout
             BindingContext="{Binding Lands}"
             Padding="5">
+            <SearchBar
+                Placeholder="Search..."
+                SearchCommand="{Binding SearchCommand}"
+                Text="{Binding Filter, Mode=TwoWay}">
+            </SearchBar>
             <ListView 
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
@@ -38,7 +43,7 @@
                                         </Label>
                                     </StackLayout>
                                     <Image 
-                                        Grid.Column="2"
+                                        Grid.Column="1"
                                         HorizontalOptions="End" 
                                         Source="chevron">
                                     </Image>
